@@ -3045,3 +3045,54 @@ input:focus, select:focus, textarea:focus {
 }
 
 
+
+/* Navbar CTA */
+.nav-cta {
+    padding: 10px 24px;
+    font-size: 1rem;
+}
+
+/* Custom Pricing Layout */
+.pricing-layout-custom {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+@media (min-width: 992px) {
+    .pricing-layout-custom {
+        grid-template-columns: 1.2fr 1fr;
+    }
+}
+
+.pricing-main-card {
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--brand-primary);
+    border-radius: 20px;
+    padding: 60px 40px;
+    text-align: center;
+    box-shadow: var(--card-shadow);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pricing-side-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.pricing-side-card {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}

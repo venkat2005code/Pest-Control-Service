@@ -135,4 +135,30 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // --- Active Nav Link Logic ---
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    // Remove active class from any pre-set items to prevent multiple actives
+    document.querySelectorAll('.nav-item.active').forEach(item => item.classList.remove('active'));
+
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            // If it's a top level nav item
+            if (link.classList.contains('nav-item')) {
+                link.classList.add('active');
+            } else {
+                // If it's in a dropdown (e.g., Home 1, Home 2)
+                const parentDropdown = link.closest('.dropdown');
+                if (parentDropdown) {
+                    const parentToggle = parentDropdown.querySelector('.nav-item');
+                    if (parentToggle) {
+                        parentToggle.classList.add('active');
+                    }
+                }
+            }
+        }
+    });
 });

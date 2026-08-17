@@ -15,7 +15,7 @@
 </head>
 <body class="light-theme">
 
-    <!-- Header Section -->
+        <!-- Header Section -->
     <header class="main-header">
         <div class="container header-container">
             <!-- Logo -->
@@ -33,7 +33,7 @@
                             <li><a href="home2.html">Home 2</a></li>
                         </ul>
                     </li>
-                    <li><a href="services.html" class="nav-item active">Residential</a></li>
+                    <li><a href="services.html" class="nav-item">Residential</a></li>
                     <li><a href="commercial.html" class="nav-item">Commercial</a></li>
                     <li><a href="pest-library.html" class="nav-item">Pest Library</a></li>
                     <li><a href="about.html" class="nav-item">About</a></li>
@@ -49,6 +49,7 @@
                         <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
                         <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                     </button>
+                    <a href="contact.html" class="btn btn-primary nav-cta">Get a Quote</a>
                 </div>
             </nav>
 
@@ -58,6 +59,7 @@
             </button>
         </div>
     </header>
+
 
     
     <!-- 1. Hero Section -->
@@ -103,39 +105,41 @@
                 <h2>Prevention Plans</h2>
                 <p>Choose the level of protection that fits your home.</p>
             </div>
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Basic Shield</h3>
+            <div class="pricing-layout-custom">
+                <!-- Featured Annual Plan (Left/Top) -->
+                <div class="pricing-main-card">
+                    <div class="popular-badge">Best Value</div>
+                    <h3>Annual Protection Plan</h3>
                     <div class="price">$49<span>/mo</span></div>
-                    <ul class="features plan-features">
-                        <li>Quarterly Exterior Treatments</li>
-                        <li>General Pest Coverage (Ants, Spiders)</li>
-                        <li>Standard Support</li>
+                    <p style="margin-bottom: 20px; color: var(--text-secondary);">Year-round protection packages tailored for your home.</p>
+                    <ul class="features plan-features" style="text-align: left; margin: 0 auto 30px auto; max-width: 300px;">
+                        <li>Quarterly scheduled treatments</li>
+                        <li>Free call-backs if pests return</li>
+                        <li>General pest coverage (Ants, Spiders, etc.)</li>
+                        <li>Priority scheduling</li>
                     </ul>
-                    <a href="#booking" class="btn btn-outline btn-block">Choose Basic</a>
+                    <a href="#booking" class="btn btn-primary btn-block">Get Protected</a>
                 </div>
-                <div class="pricing-card popular">
-                    <div class="popular-badge">Most Popular</div>
-                    <h3>Premium Defense</h3>
-                    <div class="price">$79<span>/mo</span></div>
-                    <ul class="features plan-features">
-                        <li>Bi-Monthly Treatments</li>
-                        <li>Interior & Exterior Coverage</li>
-                        <li>Rodent Baiting Stations</li>
-                        <li>Priority Support</li>
-                    </ul>
-                    <a href="#booking" class="btn btn-primary btn-block">Choose Premium</a>
-                </div>
-                <div class="pricing-card">
-                    <h3>Total Sanctuary</h3>
-                    <div class="price">$129<span>/mo</span></div>
-                    <ul class="features plan-features">
-                        <li>Monthly Treatments</li>
-                        <li>Comprehensive Pest & Termite</li>
-                        <li>Mosquito & Tick Yard Treatment</li>
-                        <li>24/7 Emergency Dispatch</li>
-                    </ul>
-                    <a href="#booking" class="btn btn-outline btn-block">Choose Total</a>
+
+                <!-- Secondary Services (Right/Bottom) -->
+                <div class="pricing-side-cards">
+                    <div class="pricing-side-card">
+                        <div>
+                            <h3>One-Time Service</h3>
+                            <div class="price" style="font-size: 1.8rem; margin: 10px 0;">Starts at $149</div>
+                            <p style="font-size: 0.95rem; color: var(--text-secondary);">Targeted treatment for active pests with a 30-Day satisfaction guarantee.</p>
+                        </div>
+                        <a href="#booking" class="btn btn-outline" style="margin-top: 20px; align-self: flex-start;">Book Service</a>
+                    </div>
+
+                    <div class="pricing-side-card">
+                        <div>
+                            <h3>Specialty Pests</h3>
+                            <div class="price" style="font-size: 1.8rem; margin: 10px 0;">Custom Quote</div>
+                            <p style="font-size: 0.95rem; color: var(--text-secondary);">Termites, bed bugs, rodent exclusion, and wildlife removal requiring on-site inspection.</p>
+                        </div>
+                        <a href="#booking" class="btn btn-outline" style="margin-top: 20px; align-self: flex-start;">Request Quote</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -345,6 +349,7 @@
             </div>
         </div>
     </footer>
+
 
     <script src="js/script.js"></script>
 </body>
