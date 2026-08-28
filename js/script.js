@@ -19,12 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
         body.classList.add('light-theme');
     }
 
-    themeToggleBtn.addEventListener('click', () => {
+    themeToggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         if (body.classList.contains('light-theme')) {
-            body.classList.replace('light-theme', 'dark-theme');
+            body.classList.remove('light-theme');
+            body.classList.add('dark-theme');
             try { localStorage.setItem('theme', 'dark-theme'); } catch(e) {}
         } else {
-            body.classList.replace('dark-theme', 'light-theme');
+            body.classList.remove('dark-theme');
+            body.classList.add('light-theme');
             try { localStorage.setItem('theme', 'light-theme'); } catch(e) {}
         }
     });

@@ -25,6 +25,13 @@
     }
     .hero > .container {
       width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .hero .hero-actions {
+      justify-content: center;
     }
   </style>
 </head>
@@ -60,9 +67,9 @@
                     <button id="rtl-toggle" class="toggle-btn" aria-label="Toggle RTL/LTR">
                         <span class="active-mode">LTR</span>
                     </button>
-                    <button id="theme-toggle" class="toggle-btn theme-btn" aria-label="Toggle Theme">
-                        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <button type="button" id="theme-toggle" class="toggle-btn theme-btn" aria-label="Toggle Theme">
+                        <svg class="moon-icon" style="pointer-events: none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        <svg class="sun-icon" style="pointer-events: none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                     </button>
                     <a href="contact.html" class="btn btn-primary nav-cta">Get a Quote</a>
                 </div>
@@ -78,8 +85,7 @@
 
     
     <!-- 1. Hero Section -->
-    <section class="hero">
-        <div class="hero-bg" style="background-image: url('../hero.avif');"></div>
+    <section class="hero" style="background-image: url('../hero.avif');">
         <div class="container hero-container">
             <div class="hero-content">
                 <span class="badge">Rated #1 Pest Control</span>
@@ -125,7 +131,7 @@
             </div>
             <div class="treatment-grid">
                 <div class="treatment-card">
-                    <img src="../c1.avif" alt="Residential Service" class="treatment-img" onerror="this.onerror=null; this.src='c1.avif';">
+                    <img src="assets/c1.avif" alt="Residential Service" class="treatment-img">
                     <div class="treatment-content">
                         <h3>Residential Defense</h3>
                         <p>Complete perimeter protection for your home.</p>
@@ -133,7 +139,7 @@
                     </div>
                 </div>
                 <div class="treatment-card">
-                    <img src="../c2.jpg" alt="Commercial Service" class="treatment-img" onerror="this.onerror=null; this.src='c2.jpg';">
+                    <img src="assets/c2.jpg" alt="Commercial Service" class="treatment-img">
                     <div class="treatment-content">
                         <h3>Commercial Compliance</h3>
                         <p>Discreet, zero-tolerance solutions for business.</p>
@@ -141,7 +147,7 @@
                     </div>
                 </div>
                 <div class="treatment-card">
-                    <img src="../c3.jpg" alt="Specialty Pests" class="treatment-img" onerror="this.onerror=null; this.src='c3.jpg';">
+                    <img src="assets/c3.jpg" alt="Specialty Pests" class="treatment-img">
                     <div class="treatment-content">
                         <h3>Specialty Treatments</h3>
                         <p>Advanced baiting for termites and bed bugs.</p>
@@ -161,15 +167,15 @@
             <div class="values-grid">
                 <div class="value-card" style="font-style: italic;">
                     <p>"Vanguard completely solved our ant problem in a single visit. The technician was incredibly professional and explained everything."</p>
-                    <h4 style="margin-top: 15px; color: var(--brand-primary);">- Sarah T.</h4>
+                    <h4 style="margin-top: auto; padding-top: 15px; color: var(--brand-primary);">- Sarah T.</h4>
                 </div>
                 <div class="value-card" style="font-style: italic;">
                     <p>"I love that they use pet-safe products. I have two dogs and was worried, but Vanguard made me feel completely at ease."</p>
-                    <h4 style="margin-top: 15px; color: var(--brand-primary);">- Michael R.</h4>
+                    <h4 style="margin-top: auto; padding-top: 15px; color: var(--brand-primary);">- Michael R.</h4>
                 </div>
                 <div class="value-card" style="font-style: italic;">
                     <p>"They handle the pest control for my restaurant. Always on time, very discreet, and their logbooks are perfect for the health inspector."</p>
-                    <h4 style="margin-top: 15px; color: var(--brand-primary);">- David L.</h4>
+                    <h4 style="margin-top: auto; padding-top: 15px; color: var(--brand-primary);">- David L.</h4>
                 </div>
             </div>
         </div>
