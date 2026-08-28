@@ -526,7 +526,9 @@ ul {
     color: var(--text-primary);
     margin-bottom: 15px;
     font-size: 1.3rem;
-    min-height: 52px;
+    min-height: 72px;
+    display: flex;
+    align-items: flex-start;
 }
 
 .value-card p {
@@ -2896,6 +2898,8 @@ input:focus, select:focus, textarea:focus {
     text-align: center;
     box-shadow: var(--card-shadow);
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .community-card:hover {
@@ -2918,7 +2922,10 @@ input:focus, select:focus, textarea:focus {
     font-size: 1.25rem;
     margin-bottom: 12px;
     color: var(--text-primary);
-    min-height: 52px;
+    min-height: 72px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .community-card p {
